@@ -16,6 +16,13 @@ directions = [
   {"W":2, "S":2}
 ]
 
+vocabulary = {
+  "WEST": "W",
+  "NORTH": "N",
+  "EAST": "E",
+  "SOUTH": "S"
+}
+
 current_loc = 1
 
 print("locations:")
@@ -30,7 +37,12 @@ while True:
   for k in directions[current_loc].keys():
     print(k)
   choice = input("wich direcction do you want to go?: ").upper()
-  if choice in directions[current_loc]:
+  if len(choice) > 1:
+    if choice in vocabulary:
+        current_loc = directions[current_loc][vocabulary[choice]]
+    else:
+        print("cannot go in this direction!")
+  elif choice in directions[current_loc]:
     current_loc = directions[current_loc][choice]
   elif choice == "Q":
     print("You are {}".format(location[0]))
