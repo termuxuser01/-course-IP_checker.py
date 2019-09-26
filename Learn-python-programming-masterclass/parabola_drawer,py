@@ -1,0 +1,42 @@
+# import time
+
+# def centertext(*args, end='\n', sep=' ', file=None, flush=False):
+#   text = ''
+#   for arg in args:
+#     text += str(arg) + sep
+#   l_marg = int((80 - len(text)) / 2)
+#   return ' ' * l_marg + text 
+
+
+# with open(time.strftime('%H:%M:%S') + 'file', 'w') as cf:
+#   cf.write(centertext("hello", "how", "are", "you", 3, 4, sep=';', file=cf))
+
+import tkinter
+#define parabloa function#
+def parabola(x):
+  return x * x
+#define pointer#
+#split screen and create axes
+def axes(canvas):
+  #update so modifiable
+  canvas.update()
+  #split by half
+  x_orgin = canvas.winfo_width() / 2
+  y_orgin = canvas.winfo_height() / 2
+  canvas.configure(-x_orgin, -y_orgin, x_orgin, y_orgin)
+  canvas.create_line(-x_orgin, 0, x_orgin, 0, fill="black")
+  canvas.create_line(-y_orgin, 0, y_orgin, 0, fill="black")
+
+#define the main window
+mainwindow = tkinter.Tk()
+mainwindow.tittle("parabola")
+mainwindow.geometry("640x480")
+
+#define canvas
+canvas = tkinter.Canvas(mainwindow, width=640, height=480)
+
+#defin original starting point for canvas
+canvas.grid(x=0, y=0)
+
+#call axes
+axes(canvas)
