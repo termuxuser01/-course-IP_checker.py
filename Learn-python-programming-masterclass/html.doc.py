@@ -70,3 +70,4 @@ if __name__ == "__main__":
   with open("file.html", 'w') as f:
     page.display(file=f)
 
+
