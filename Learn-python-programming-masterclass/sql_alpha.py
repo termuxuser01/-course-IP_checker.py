@@ -2,28 +2,26 @@ import sqlite3
 from string import ascii_lowercase as lw
 from string import ascii_uppercase as up
 
-db = sqlite3.connect("alpha.sqlite")
+db = sqlite3.connect("mylove.sqlite")
 
-db.execute("CREATE TABLE IF NOT EXISTS  alpha (id INTEGER, name TEXT);")
+db.execute("CREATE TABLE IF NOT EXISTS alpha (id INTEGER, letter TEXT);")
 db.execute("CREATE TABLE IF NOT EXISTS upper_alpha (id INTEGER, letteru TEXT);")
 
-UPDATE_DB = "INSERT INTO alpha VALUES( ?, ?);"
-update_cursor = db.cursor()
 
-for t in zip(range(26), lw):
-  update_cursor.execute(UPDATE_DB, t)
+update_db = "INSERT INTO alpha VALUES(?, ?);"
 
-UPDATE_DB = "INSERT INTO upper_alpha VALUES( ?, ?);"
+UPDATE_CURSOR = db.cursor()
 
-for t in zip(range(26), up):
-  update_cursor.execute(UPDATE_DB, t)
+for t in zip(range(1,27), lw):
+  UPDATE_CURSOR.execute(update_db, t)
 
-db.commit()
+update_db = "INSERT INTO upper_alpha VALUES(?, ?);"
 
-for id, letter, letteru in db.execute("SELECT alpha.id, alpha.name, upper_alpha.letteru FROM alpha INNER JOIN upper_alpha ON alpha.id = upper_alpha.id;"):
-  print("id: ", id)
-  print("letter: ", letter)
-  print("uppercase: ", letteru) 
+for t in zip(range(1,27), up):
+  UPDATE_CURSOR.execute(update_db, t)
+
+for i, l, u in db.execute("SELECT alpha.id, alpha.letter, upper_alpha.letteru FROM alpha JOIN upper_alpha ON alpha.id = upper_alpha.id"):
+  print(f'id: {i}\nletter: {l}\nuppercase: {u}')
   print("-" * 40)
 
 db.close()
