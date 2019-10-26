@@ -1,4 +1,7 @@
 https://www.udemy.com/course/python-the-complete-python-developer-course/
+This course includes
+42 hours on-demand video
+14 articles
 
 
 
