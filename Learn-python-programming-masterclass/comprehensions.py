@@ -31,3 +31,14 @@ print(words)
 words2 = text.split(' ')
 
 print(words2)
+
+###############
+#nested comprehensions
+
+burgers = ["beef", "chicken", "spicy beans"]
+toppings = ["cheese", "eggs", "beans", "spam"]
+
+meals = [(burger, topping) for burger in burgers for topping in toppings]
+
+print(meals)
+
