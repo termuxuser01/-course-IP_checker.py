@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <title>display utilities</title>
+    
+  </head>
+  <body>
+  <div class="container">
+    <h1 class="text-center display-3">
+      Veronica
+    </h1>
+    <!-- change display of elements (here ther is inline and block) -->
+    <h1 class="border border-info d-inline">
+      Vianey
+    </h1>
+    <h1 class="border border-success d-block">
+      Vianey
+    </h1>
+    <!-- hide or show elemnts on certain breakpoints -->
+    <!-- do no display when md breakpoint is reached -->
+    <h1 class="border border-basic d-md-none">
+      i love vianney untill md
+    </h1>
+    <!-- dont show untill lg -->
+    <h1 class=" border border-danger d-none d-lg-block">
+      i wont love vianney untill im large
+    </h1>
+    <p class="text-primary d-none d-md-none d-lg-none d-xl-none d-sm-block">
+      mobile users can suck my dick
+    </p>
+  </div>
+    
+  </body>
+</html>
