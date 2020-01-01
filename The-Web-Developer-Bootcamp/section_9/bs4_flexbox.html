@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="text-center display-4">
+        flexbox
+      </h1>
+      <h2 class="text-center display-6">
+        justify-content-around
+      </h2>
+    
+      <div class="border border-dark d-flex justify-content-around" style="height: 100px">
+        <button class="btn btn-warning btn-lg"> large
+        </button>
+        <button class="btn btn-primary">
+          small
+        </button>
+      </div>
+      <h2 class="text-center display-6">
+      justify-content-start
+      </h2>
+      <div class="border border-dark d-flex justify-content-start" style="height: 100px">
+      
+        <button class="btn btn-warning btn-lg"> large
+        </button>
+        <button class="btn btn-primary">
+          small
+        </button>
+      </div>
+        <h2 class="text-center display-6">
+        justify-content-center
+      </h2>
+      <div class="border border-dark d-flex justify-content-center" style="height: 100px">
+        <button class="btn btn-warning btn-lg"> large
+        </button>
+        <button class="btn btn-primary">
+          small
+        </button>
+      </div>
+      <h2 class="text-center display-6">
+        justify-content-between
+      </h2>
+      <div class="border border-dark d-flex justify-content-between" style="height: 100px">
+        <!-- betwwen will administer the space betwwen all elements -->
+        <button class="btn btn-warning btn-lg"> large
+        </button>
+        <button class="btn btn-primary">
+          small
+        </button>
+        <button class="btn btn-danger">
+          small
+        </button>
+      </div>
+    </div>
+    <div class="container">
+      <h1 class="text-center display-4">
+        align-items
+      </h1>
+      <h2 class="text-center display-6">
+        align-items-start
+      </h2>
+      <!-- allign items at start of y axis -->
+      <div class="border border-dark d-flex justify-content-between align-items-start" style="height: 100px">
+        <button class="btn btn-warning btn-lg"> large
+        </button>
+        <button class="btn btn-primary">
+          small
+        </button>
+        <button class="btn btn-danger">
+          small
+        </button>
+      </div>
+      <h2 class="text-center display-6">
+        align-items-end
+      </h2>
+      <!-- allign items at end of y axis -->
+      <div class="border border-dark d-flex justify-content-between align-items-end" style="height: 100px">
+        <button class="btn btn-warning btn-lg"> large
+        </button>
+        <button class="btn btn-primary">
+          small
+        </button>
+        <button class="btn btn-danger">
+          small
+        </button>
+      </div>
+      <h2 class="text-center display-6">
+        align-items-center
+      </h2>
+      <!-- allign items at center of y axis -->
+      <div class="border border-dark d-flex justify-content-between align-items-center" style="height: 100px">
+        <button class="btn btn-warning btn-lg"> large
+        </button>
+        <button class="btn btn-primary">
+          small
+        </button>
+        <button class="btn btn-danger">
+          small
+        </button>
+      </div>
+      <h2 class="text-center display-6">
+        reverse flow of axis
+      </h2>
+      <p class="text-danger"> these are set to the start of the x axis and the end of y axis but the flow has been reversed</p>
+      <!-- this rverse therows and column flow -->
+      <div class="border border-dark d-flex flex-row-reverse flex-column-reverse justify-content-start align-items-end" style="height: 100px">
+        <button class="btn btn-warning btn-lg"> large
+        </button>
+        <button class="btn btn-primary">
+          small
+        </button>
+        <button class="btn btn-danger">
+          small
+        </button>
+      </div>
+      <div class="d-flex flex-column flex-md-row justify-content/justify-content-between">
+        <button class="btn btn-dark">1</button>
+        <button class="btn btn-dark">2</button>
+        <button class="btn btn-dark">3</button>
+        <button class="btn btn-dark">4</button>
+      </div>
+    </div>
+  </body>
+</html>
